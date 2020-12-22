@@ -1,0 +1,12 @@
+body {
+    background-color: rgb(167, 167, 167);
+    text-align: center;
+}
+h1 {
+    font-size: 20px;
+    color : rgb(255, 163, 43);
+    text-align: center;
+}
+#contenuimage {
+    width: 100%;
+}
