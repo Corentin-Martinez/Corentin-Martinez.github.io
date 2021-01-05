@@ -27,26 +27,22 @@ function typedeleter(phrase) {
 /* pour la liste */
 var j = 0
 function typeWriterListe() {
-    if (isInView) {
-        if (j> 0 ){
-            j--;
-            console.log('deleting word',liste_typing[j])
-            typedeleter(liste_typing[j])
-            j++;
-            if (j == liste_typing.length){
-                j = 0;
-            }
+    if (j> 0 ){
+        j--;
+        console.log('deleting word',liste_typing[j])
+        typedeleter(liste_typing[j])
+        j++;
+        if (j == liste_typing.length){
+            j = 0;
         }
-        if (j < liste_typing.length && i == 0) {
-            console.log('writing word',liste_typing[j])
-            typeWriter(liste_typing[j])
-            j++ ;
-            console.log('j =', j);
-        }
-        setTimeout(typeWriterListe, 2000);
-
     }
-
+    if (j < liste_typing.length && i == 0) {
+        console.log('writing word',liste_typing[j])
+        typeWriter(liste_typing[j])
+        j++ ;
+        console.log('j =', j);
+    }
+    setTimeout(typeWriterListe, 2000);
 }
 
 /* typing effect au moment ou le doc est pret */
