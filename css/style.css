@@ -7,6 +7,11 @@ h1 {
     color : rgb(255, 163, 43);
     text-align: center;
 }
-#contenuimage {
+.contenuimage {
     width: 100%;
+}
+
+.orange {
+    height: 200px;
+    background-color: rgb(100, 80, 42);
 }
