@@ -62,7 +62,7 @@ $(document).ready(function(){
           clearTimeout(Writetime);
           clearTimeout(Deletetime);
           i = 0
-          document.getElementById("demo").innerHTML = liste_typing[j].substring(0, i - 1);
+          document.getElementById("demo").innerHTML = liste_typing[j-1].substring(0, i - 1);
        }
     });
  });
