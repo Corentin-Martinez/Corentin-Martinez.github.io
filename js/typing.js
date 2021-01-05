@@ -9,7 +9,7 @@ function typeWriter(phrasetapee) {
         document.getElementById("demo").innerHTML += phrasetapee.charAt(i);
         i++;
         console.log('writing',i);
-        setTimeout(function(){typeWriter(phrasetapee)}, speed);
+        Writetime = setTimeout(function(){typeWriter(phrasetapee)}, speed);
     }
 }
 
@@ -20,7 +20,7 @@ function typedeleter(phrase) {
         document.getElementById("demo").innerHTML = phrase.substring(0, i - 1);
         i--;
         console.log('mot = ',phrase);
-        setTimeout(function(){typedeleter(phrase)}, speed);
+        Deletetime = setTimeout(function(){typedeleter(phrase)}, speed);
     }
 }
 
@@ -42,15 +42,30 @@ function typeWriterListe() {
         j++ ;
         console.log('j =', j);
     }
-    setTimeout(typeWriterListe, 2000);
+    listetime = setTimeout(typeWriterListe, 2000);
 }
 
-/* typing effect au moment ou le doc est pret */
+
+
 $(document).ready(function(){
-    $("#demo").bind('inview',typeWriterListe)
-});
-
-
+    $('#demo').bind('inview', function(event, isInView, visiblePartX, visiblePartY) {
+  
+       if (isInView) {
+          // l'élément est visible
+          $("#demo").ready(typeWriterListe);
+  
+          
+       } 
+  
+       else {
+          clearTimeout(listetime);
+          clearTimeout(Writetime);
+          clearTimeout(Deletetime);
+          i = 0
+          document.getElementById("demo").innerHTML = liste_typing[j].substring(0, i - 1);
+       }
+    });
+ });
 
 
 
