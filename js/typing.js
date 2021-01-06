@@ -5,6 +5,10 @@ var speed = 50; /* The speed/duration of the effect in milliseconds */
 
 /* pour un mot*/
 function typeWriter(phrasetapee) {
+    if (typeof activwriter == true) {
+        console.log ('TIME liste =', Writetime);
+        clearTimeout(Writetime);
+    }
     if (i < phrasetapee.length) {
         document.getElementById("demo").innerHTML += phrasetapee.charAt(i);
         i++;
@@ -15,18 +19,28 @@ function typeWriter(phrasetapee) {
 
 /* fonction suppression du mot*/
 function typedeleter(phrase) {
+    if (typeof activwriter == true) {
+        console.log ('TIME liste =', Deletetime);
+        clearTimeout(Deletetime);
+    }
     if (i > 0) {
-        console.log('deleting',i);
+        //console.log('deleting',i);
         document.getElementById("demo").innerHTML = phrase.substring(0, i - 1);
         i--;
-        console.log('mot = ',phrase);
+        //console.log('mot = ',phrase);
         Deletetime = setTimeout(function(){typedeleter(phrase)}, speed);
     }
 }
 
 /* pour la liste */
 var j = 0
+var activwriter = false
 function typeWriterListe() {
+    if (typeof activwriter == true) {
+        console.log ('TIME liste =', listetime);
+        clearTimeout(listetime);
+    }
+    activwriter = true
     if (j> 0 ){
         j--;
         console.log('deleting word',liste_typing[j])
@@ -51,8 +65,30 @@ $(document).ready(function(){
     $('#demo').bind('inview', function(event, isInView, visiblePartX, visiblePartY) {
   
        if (isInView) {
+        activwriter == true
           // l'élément est visible
-          $("#demo").ready(typeWriterListe);
+          // remise a zero pour eviter l'onglet-bug
+          if (typeof activwriter == true) {
+              console.log ('TIME liste =', listetime);
+              clearTimeout(listetime);
+          }
+          if (typeof activwriter == true) {
+            console.log ('TIME write =', Writetime);
+            clearTimeout(Writetime);
+        }
+        if (typeof activwriter == true) {
+            console.log ('TIME del =', Deletetime);
+            clearTimeout(Deletetime);
+        }
+          i = 0
+          if (j > 0) {
+            document.getElementById("demo").innerHTML = liste_typing[j-1].substring(0, i - 1);
+        }
+        activwriter = false
+        // lancement fonction
+        if (activwriter == false){
+            $("#demo").ready(typeWriterListe);
+        }
   
           
        } 
@@ -62,7 +98,10 @@ $(document).ready(function(){
           clearTimeout(Writetime);
           clearTimeout(Deletetime);
           i = 0
-          document.getElementById("demo").innerHTML = liste_typing[j-1].substring(0, i - 1);
+          if (j > 0) {
+            document.getElementById("demo").innerHTML = liste_typing[j-1].substring(0, i - 1);
+        }
+          activwriter = false
        }
     });
  });
