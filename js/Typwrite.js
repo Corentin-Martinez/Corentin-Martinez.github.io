@@ -72,7 +72,7 @@ function pausetype() {
     clearTimeout(Deletetime);
     i = 0
     if (j > 0) {
-        document.getElementById("demo").innerHTML = liste_typing[j];
+        document.getElementById("demo").innerHTML = liste_typing[j-1];
     }
 
 }
