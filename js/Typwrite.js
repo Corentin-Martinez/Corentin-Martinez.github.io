@@ -36,7 +36,7 @@ function typeWriterListe() {
         console.log('deleting word',liste_typing[j])
         typedeleter(liste_typing[j])
         j++;
-        if (j == liste_typing.length){
+        if (j == liste_typing.length && i == 0){
             j = 0;
         }
     }
@@ -58,9 +58,6 @@ function typeWriterListe() {
 function playtype() {
     $(document).ready(function(){
         console.log("PLAY TYPE");
-        if (j > 0) {
-            document.getElementById("demo").innerHTML = liste_typing[j-1].substring(0, i - 1);
-        }
         $("#demo").ready(typeWriterListe);
     });
   }
@@ -70,10 +67,6 @@ function pausetype() {
     clearTimeout(listetime);
     clearTimeout(Writetime);
     clearTimeout(Deletetime);
-    i = 0
-    if (j > 0) {
-        document.getElementById("demo").innerHTML = liste_typing[j-1];
-    }
 
 }
 window.addEventListener('focus', playtype);
