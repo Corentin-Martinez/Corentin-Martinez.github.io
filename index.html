@@ -12,16 +12,55 @@
         <script src="js/Typwrite.js"></script>
         <title>Page Renard</title>
     </head>
-    <body>
-        <h1>Les Renards</h1>
+
+    <!-- Wrapper -->
+    <div class = "row"; background-color = "red">
 
         <!-- Navbar -->
-        <div class="navbar navbar-expand-lg navbar-light bg-light">
-            Test
-        </div>
+        <nav class="col-3" style="background-color:#14213D; height: 100%; position: fixed; display: flex; flex-direction: column;">
+            <div  style="height: 25%;">
+                <p class = "nom"> Corentin Martinez</p>
+                <p id="metier" ></p> 
+    
+            </div>
+            <div style="height: 50%; display: flex; flex-direction: column; justify-content: space-around;">
+                <div class="section">
+                    <a class="lien active " aria-current="page" href="#">Accueil</a>
 
-        <!-- 3 colonnes -->
-        <div class="container-fluid">
+                </div>
+                <div class="section">
+                    <a class="lien active" href="#">Formation</a>
+
+                </div>
+                <div class="section">
+                    <a class="lien active" href="#">Compétences</a>
+
+                </div>
+                <div class="section">
+                    <a class="lien active" href="#" tabindex="-1">Expériences professionnelles</a>
+
+                </div>
+                <div class="section">
+                    <a class="lien active" href="#" tabindex="-1">Centres d'interêt</a>
+
+                </div>
+            </div>
+            <div >
+                <a href="https://github.com/Corentin-Martinez/Corentin-Martinez.github.io" style="position: ;">
+                    <img class="fit-picture"
+                    src="Ressources/logo/logo_github.png"
+                    alt="GitHub"
+                    height="40px"/>
+                </a>
+
+            </div>
+
+        </nav>
+
+        <!-- content -->
+        <div class="col-9 offset-3" style="position: left;">
+
+            <!-- 3 colonnes -->
             <div class="row">
                 <div class="col-4">
                     <div id=contenuimage>
@@ -29,7 +68,7 @@
                         class="fit-picture"
                         src="Ressources/image/renard.jpg"
                         alt="renard"
-                        height="400px"/>
+                        height="200px"/>
             
                     </div>
                     <button id="changeimg" 
@@ -37,13 +76,13 @@
                     > Hibou </button>
     
                 </div>
-                <div class="col-4">
+                <div class="col-4"> 
                     <div class="contenuimage">
                         <img id="imagecentre"
                         class="fit-picture"
                         src="Ressources/image/renard.jpg"
                         alt="renard"
-                        height="400px"/>
+                        height="200px"/>
             
                     </div>
                     <button id="changeimg" 
@@ -56,7 +95,7 @@
                         class="fit-picture"
                         src="Ressources/image/renard.jpg"
                         alt="renard"
-                        height="400px"/>
+                        height="200px"/>
             
                     </div>
                     <button 
@@ -66,33 +105,28 @@
 
             </div>
 
+
+             <!-- Bandeau -->
+            <div id=contenuimage>
+                <img id="imagerenard"
+                class="fit-picture"
+                src="Ressources/image/renard.jpg"
+                alt="renard"
+                height="400px"/>
+    
+            </div>
+            <button id="changeimg" 
+            onclick="changeimage('imagerenard')" 
+            > Hibou </button>
+
+            <!-- Text -->
+            <p>
+                Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur
+            </p>
+
         </div>
 
-        <!-- Bandeau -->
-        <div class="container-fluid orange">
-            <p class = "nom"> Corentin Martinez</p>
-            <p id="demo"></p> 
 
-        </div>
 
-        <div id=contenuimage>
-            <img id="imagerenard"
-            class="fit-picture"
-            src="Ressources/image/renard.jpg"
-            alt="renard"
-            height="400px"/>
-
-        </div>
-        <button id="changeimg" 
-        onclick="changeimage('imagerenard')" 
-        > Hibou </button>
-
-        <p>Les renards sont des animaux choux</p>
-        <a href="https://github.com/Corentin-Martinez/Corentin-Martinez.github.io">
-            <img class="fit-picture"
-            src="Ressources/logo/logo_github.png"
-            alt="GitHub"
-            height="40px"/>
-        </a>
-    </body>
+    </div>
 </html>

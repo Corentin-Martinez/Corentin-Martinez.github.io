@@ -15,3 +15,34 @@ h1 {
     height: 200px;
     background-color: rgb(100, 80, 42);
 }
+
+/* navbar */
+.nom {
+    color: #FCA311;
+    font-size: 5vmin;
+    font-family: Roboto;
+    
+}
+
+#metier {
+    color: #FCA311;
+    font-size: 2vmin;
+    font-family: Lato;
+}
+
+.section {
+    border-style: solid;
+    border-color: rgb(255, 163, 43);
+    border-radius: 15%;
+    margin: 10%;
+    
+}
+
+.lien {
+    color: #FCA311;
+    font-size: medium;
+    text-decoration:underline;
+    position:auto;
+    font-size: 2.3vmin;
+    
+}

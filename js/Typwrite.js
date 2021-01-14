@@ -1,6 +1,5 @@
 var i = 0;
 var liste_typing = ['Géomaticien','Analyse de données','Développeur Web']
-var txt = 'Lorem ipsum typing effect!'; /* The text */
 var speed = 50; /* The speed/duration of the effect in milliseconds */
 var j = 0
 var activwriter = false
@@ -8,7 +7,7 @@ var activwriter = false
 /* pour un mot*/
 function typeWriter(phrasetapee) {
     if (i < phrasetapee.length) {
-        document.getElementById("demo").innerHTML += phrasetapee.charAt(i);
+        document.getElementById("metier").innerHTML += phrasetapee.charAt(i);
         i++;
         console.log('writing',i);
         Writetime = setTimeout(function(){typeWriter(phrasetapee)}, speed);
@@ -19,7 +18,7 @@ function typeWriter(phrasetapee) {
 function typedeleter(phrase) {
     if (i > 0) {
         //console.log('deleting',i);
-        document.getElementById("demo").innerHTML = phrase.substring(0, i - 1);
+        document.getElementById("metier").innerHTML = phrase.substring(0, i - 1);
         i--;
         //console.log('mot = ',phrase);
         Deletetime = setTimeout(function(){typedeleter(phrase)}, speed);
@@ -51,14 +50,10 @@ function typeWriterListe() {
 
 
 
-/*$(document).ready(function(){
-    $("#demo").ready(typeWriterListe);
-});*/
-
 function playtype() {
     $(document).ready(function(){
         console.log("PLAY TYPE");
-        $("#demo").ready(typeWriterListe);
+        $("#metier").ready(typeWriterListe);
     });
   }
 
