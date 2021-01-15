@@ -17,6 +17,21 @@ h1 {
 }
 
 /* navbar */
+.navbar {
+    background-color:#14213D; 
+    height: 100%; 
+    position: fixed; 
+    display: flex; 
+    flex-direction: column;
+    margin-right: 0%;
+}
+
+.content-nav {
+    margin-left: 5%;
+    margin-right: 5%;
+}
+
+
 .nom {
     color: #FCA311;
     font-size: 5vmin;
@@ -26,23 +41,26 @@ h1 {
 
 #metier {
     color: #FCA311;
-    font-size: 2vmin;
+    font-size: 2.5vmin;
     font-family: Lato;
 }
 
 .section {
+    height: 15%;
     border-style: solid;
     border-color: rgb(255, 163, 43);
-    border-radius: 15%;
+    border-radius: 40px;
     margin: 10%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     
 }
 
 .lien {
     color: #FCA311;
     font-size: medium;
-    text-decoration:underline;
     position:auto;
-    font-size: 2.3vmin;
+    font-size: 2vmin;
     
 }
