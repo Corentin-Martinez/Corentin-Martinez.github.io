@@ -1,5 +1,5 @@
 body {
-    background-color: rgb(167, 167, 167);
+    background-color: #ffffff;
     text-align: center;
 }
 h1 {
@@ -49,6 +49,7 @@ h1 {
     height: 15%;
     border-style: solid;
     border-color: rgb(255, 163, 43);
+    border-width: 0.3vmin;
     border-radius: 40px;
     margin: 10%;
     display: flex;

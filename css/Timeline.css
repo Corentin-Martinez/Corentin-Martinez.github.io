@@ -1,0 +1,75 @@
+.Timeline {
+    background-color: transparent;
+    min-height: 100%;
+    margin: 0;
+    font-family: "Droid Sans", sans-serif;
+  }
+  .Timeline .entries {
+    width: calc(100% - 5%);
+    max-width: 800px;
+    margin: auto;
+    position: relative;
+  }
+  .Timeline .entries .entry {
+    width: calc(50% - 2%);
+    float: left;
+    padding: 20px;
+    clear: both;
+    text-align: right;
+  }
+  .Timeline .entries .entry:not(:first-child) {
+    margin-top: -60px;
+  }
+  .Timeline .entries .entry .title {
+    font-size: 32px;
+    margin-bottom: 12px;
+    position: relative;
+    color: #14213D;
+  }
+  .Timeline .entries .entry::before {
+    content: "";
+    position: absolute;
+    width: 16px;
+    height: 16px;
+    border: 4px solid #14213D;
+    background-color: #FCA311;
+    border-radius: 100%;
+    left: 50%;
+    transform: translate(-50%, 1em);
+    z-index: 1000;
+  }
+  .Timeline .entries .entry.form::before {
+    background-color: #ffffff;
+  }
+  .Timeline .entries .entry.projet::before {
+    background-color: #0892A5;
+  }
+  .Timeline .entries .entry .body {
+    color: black;
+  }
+  .Timeline .entries .entry .body p {
+    line-height: 1.4em;
+  }
+  .Timeline .entries .entry:nth-child(2n) {
+    text-align: left;
+    float: right;
+  }
+  .Timeline .entries .entry:nth-child(2n) .title:before {
+    left: -30%;
+  }
+  .Timeline .entries .entry:nth-child(2n) .title.big:before {
+    transform: translate(-8px, -50%);
+  }
+
+  /*ligne timeline*/
+  .Timeline .entries .entry:after {
+    content: "";
+    position: absolute;
+    top: 0px;
+    left: 50%;
+    bottom: 0px;
+    transform: translateX(-50%);
+    width: 4px;
+    height: 100%;
+    background-color: #14213D;
+  }
