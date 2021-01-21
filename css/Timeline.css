@@ -16,6 +16,7 @@
     padding: 20px;
     clear: both;
     text-align: right;
+    margin-block-end: 5%;
   }
   .Timeline .entries .entry:not(:first-child) {
     margin-top: -60px;
