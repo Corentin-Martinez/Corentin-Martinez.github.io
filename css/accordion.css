@@ -1,0 +1,16 @@
+.accordion-title {
+	display: block;
+	margin: 0;
+	padding: 0;
+	line-height: 34px;
+	text-decoration: underline;
+	cursor: pointer;
+	background: transparent;  
+	color: #FCA311;
+}
+.accordion-title:hover{
+	color:chocolate;
+}
+.accordion-content{
+    display: none;
+}

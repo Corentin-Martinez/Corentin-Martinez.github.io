@@ -6,7 +6,7 @@
   }
   .Timeline .entries {
     width: calc(100% - 5%);
-    max-width: 800px;
+    max-width: 80%;
     margin: auto;
     position: relative;
   }

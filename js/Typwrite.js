@@ -9,7 +9,7 @@ function typeWriter(phrasetapee) {
     if (i < phrasetapee.length) {
         document.getElementById("metier").innerHTML += phrasetapee.charAt(i);
         i++;
-        console.log('writing',i);
+        //console.log('writing',i);
         Writetime = setTimeout(function(){typeWriter(phrasetapee)}, speed);
     }
 }
@@ -32,7 +32,7 @@ function typeWriterListe() {
     activwriter = true
     if (j> 0 ){
         j--;
-        console.log('deleting word',liste_typing[j])
+        //console.log('deleting word',liste_typing[j])
         typedeleter(liste_typing[j])
         j++;
         if (j == liste_typing.length && i == 0){
@@ -40,7 +40,7 @@ function typeWriterListe() {
         }
     }
     if (j < liste_typing.length && i == 0) {
-        console.log('writing word',liste_typing[j])
+        //console.log('writing word',liste_typing[j])
         typeWriter(liste_typing[j])
         j++ ;
         console.log('j =', j);
@@ -52,7 +52,7 @@ function typeWriterListe() {
 
 function playtype() {
     $(document).ready(function(){
-        console.log("PLAY TYPE");
+        //console.log("PLAY TYPE");
         $("#metier").ready(typeWriterListe);
     });
   }
