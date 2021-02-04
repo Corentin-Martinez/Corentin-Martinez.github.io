@@ -65,3 +65,70 @@ h1 {
     font-size: 2vmin;
     
 }
+
+.entete {
+    background-color: darkgray;
+    height: 25vh;
+    width: 100%;
+    --bs-gutter-x: 0%;
+    
+}
+
+/*competences*/
+.container-comp {
+    width: 90%;
+    padding-left: 10%;
+}
+
+.famille-comp {
+    display: flex;
+    flex-direction: column;
+}
+.titrebloc {
+    text-align: left;
+    font-size: 3vmin;
+    float: left;
+    background-color: white;
+    position: relative;
+    left: 5%;
+    padding-left: 1%;
+    padding-right: 1%;
+    z-index: 1000;
+    margin-bottom: -0.5em;
+
+}
+
+.bloccomp {
+    border: solid;
+    border-color: black;
+    border-width: thin;
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    padding-top: 3%;
+    margin-bottom: 5%;
+    margin-top: 5%;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+
+.competence {
+    display: flex;
+    flex-direction: row;
+    padding-bottom: 2%;
+    padding-top: 2%;
+    padding-left: 2.5vw;
+    padding-right: 2.5vw;
+    align-items: center;
+
+}
+
+.compicone {
+    width : 2vw;
+    height: 2vw;
+}
+.comptxt {
+    padding-left: 1vw;
+    text-align: start;
+    font-size: 1vw;
+}
