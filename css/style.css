@@ -2,11 +2,12 @@ body {
     background-color: #ffffff;
     text-align: center;
 }
-h1 {
-    font-size: 20px;
+h1 {    
     color : rgb(255, 163, 43);
     text-align: center;
+    font-family: 'Bungee', cursive;
 }
+
 .contenuimage {
     width: 100%;
 }
@@ -67,12 +68,45 @@ h1 {
 }
 
 .entete {
-    background-color: darkgray;
+    background-image: url("../Ressources/image/network.jpg");
     height: 25vh;
     width: 100%;
     --bs-gutter-x: 0%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     
 }
+
+/* effet parallax */
+.parallax-container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    perspective: 8px;
+    perspective-origin: 0%;
+    display: flex;
+    flex-direction: column;
+}
+
+.fond-parallax {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transform: translateZ(0px);
+}
+
+
+.devant-parallax {
+    margin-top: auto;
+    margin-bottom: 0px;
+    transform-origin: 0;
+    transform: translateZ(3px) scale(0.625);
+  }
 
 /*competences*/
 .container-comp {
@@ -131,4 +165,37 @@ h1 {
     padding-left: 1vw;
     text-align: start;
     font-size: 1vw;
+}
+
+/* interet */
+.interet {
+    display: flex;
+    flex-direction: row;
+    height: 15%;
+    width: 100%;
+    --bs-gutter-x: 0%;
+    padding-left: 10%;
+    padding-right: 10%;
+}
+
+.interet:nth-child(2n) {
+    flex-direction: row-reverse;
+    background-color: #E5E5E5;
+}
+
+.icone-interet {
+    height: 100%;
+    width : auto
+}
+
+.text-interet {
+    display: flex;
+    align-content: center;
+    flex-direction: column;
+    width: 40vw;
+}
+.title-interet {
+    display: flex;
+    justify-content: center;
+    padding-top: 2vh;
 }
